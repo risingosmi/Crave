@@ -32,6 +32,7 @@ echo ">>> Now Cloning Kernel Tree repository\n\n"
 # Device Kernel
 git clone https://github.com/risingosmi/kernel_xiaomi_sm6250.git -b 16 kernel/xiaomi/sm6250
 
+echo ">>> Now Cloning Hardware Tree repository\n\n"
 # Device Hardware 
 git clone https://github.com/risingosmi/hardware_xiaomi.git -b 16 hardware/xiaomi
 
@@ -44,6 +45,8 @@ echo ">>> Now Cloning Timekeep Tree repository\n\n"
 git clone https://github.com/LineageOS/android_hardware_sony_timekeep.git -b lineage-22.2 hardware/sony/timekeep
 
 echo ">>> Now Rom In Building Setup\n\n"
+
+
 # Sync
 /opt/crave/resync.sh
 
