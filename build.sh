@@ -57,14 +57,3 @@ riseup miatoll user
 echo ">>> Starting normal build (test-keys)\n\n"
 rise b
 echo ">>> Normal build finished\n\n"
-
-# ----------- Generate signing keys -----------
-echo ">>> Generating release signing keys\n\n"
-gk -s
-
-# ----------- Build 2 (signed build) -----------
-echo ">>> Starting signed build (release-keys)\n\n"
-rise sb
-echo ">>> Signed build finished\n\n"
-
-echo ">>> Both builds completed successfully!\n\n"
