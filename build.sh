@@ -51,7 +51,7 @@ echo ">>> Now Rom In Building Setup\n\n"
 source build/envsetup.sh
 
 # Lunch
-riseup lineage_miatoll user
+riseup miatoll user
 
 # ----------- Build 1 (normal testkey build) -----------
 echo ">>> Starting normal build (test-keys)\n\n"
