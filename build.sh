@@ -53,6 +53,13 @@ echo ">>> Now Rom In Building Setup\n\n"
 # Set up build environment
 source build/envsetup.sh
 
+# Enable ccache
+export USE_CCACHE=1
+export CCACHE_EXEC=$(which ccache)
+ccache -M 100G
+ccache -o compression=true
+ccache -z
+
 # Lunch
 riseup lineage_miatoll user
 
