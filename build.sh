@@ -74,7 +74,7 @@ source build/envsetup.sh
 riseup miatoll user
 
 # Singing The Rom 
-gk -s
+gk -f
 
 # ----------- Build 1 (normal testkey build) -----------
 echo ">>> Starting normal Build Realase Key \n\n"
