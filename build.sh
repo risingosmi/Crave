@@ -44,6 +44,10 @@ echo ">>> Now Cloning Timekeep Tree repository\n\n"
 # LineageOS TimeKeep
 git clone https://github.com/LineageOS/android_hardware_sony_timekeep.git -b lineage-22.2 hardware/sony/timekeep
 
+echo "Now Settings Custom OTA updates "
+# OTA Resource
+git clone https://github.com/risingosmi/android_packages_apps_Updater.git -b 16 packages/apps/Updater
+
 echo ">>> Now Rom In Building Setup\n\n"
 
 
@@ -56,7 +60,10 @@ source build/envsetup.sh
 # Lunch
 riseup miatoll user
 
+# Singing The Rom 
+gk -s
+
 # ----------- Build 1 (normal testkey build) -----------
-echo ">>> Starting normal build (test-keys)\n\n"
-rise b
+echo ">>> Starting normal Build Realase Key \n\n"
+rise sb
 echo ">>> Normal build finished\n\n"
