@@ -28,6 +28,12 @@ echo ">>> Now Rom Initialize local repository\n\n"
 # ROM source repo
 repo init -u https://github.com/RisingOS-Revived/android -b sixteen --git-lfs
 
+
+echo ">>> Now Cloning KEY repository\n\n"
+# Sigm keys
+git clone https://github.com/risingosmi/vendor-risingos_priv-keys.git -b 16 vendor/lineage-priv/keys
+
+
 echo ">>> Now Cloning Device Tree repository\n\n"
 # Device Tree
 git clone https://github.com/risingosmi/device_xiaomi_miatoll.git -b 16 device/xiaomi/miatoll
@@ -43,10 +49,6 @@ git clone https://github.com/risingosmi/kernel_xiaomi_sm6250.git -b 16 kernel/xi
 echo ">>> Now Cloning Hardware Tree repository\n\n"
 # Device Hardware 
 git clone https://github.com/risingosmi/hardware_xiaomi.git -b 16 hardware/xiaomi
-
-echo ">>> Now Cloning Camera Tree repository\n\n"
-# Device Camera
-git clone https://github.com/risingosmi/vendor_xiaomi_miuicamera.git -b 16 vendor/xiaomi/miuicamera
 
 echo ">>> Now Cloning Timekeep Tree repository\n\n"
 # LineageOS TimeKeep
