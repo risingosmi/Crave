@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+
 # Clean old repo/local_manifests and device/vendor/kernel/hardware trees
 echo ">>> Cleaning old manifests and device/vendor/kernel/hardware directories\n\n\n"
 rm -rf .repo/local_manifests/
@@ -15,6 +17,12 @@ echo ">>> Clear hardware \n\n"
 rm -rf hardware/xiaomi
 echo ">>> Clear TimeKeep\n\n"
 rm -rf hardware/sony/timekeep
+echo "Remove Official OTA and Add A Custom OTA"
+rm -rf packages/apps/Updater
+
+
+
+#Rom Setup
 
 echo ">>> Now Rom Initialize local repository\n\n"
 # ROM source repo
@@ -50,6 +58,9 @@ git clone https://github.com/risingosmi/android_packages_apps_Updater.git -b 16 
 
 echo ">>> Now Rom In Building Setup\n\n"
 
+
+
+#Rom Building
 
 # Sync
 /opt/crave/resync.sh
