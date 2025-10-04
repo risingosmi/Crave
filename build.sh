@@ -9,8 +9,6 @@ echo ">>> Clear device\n\n"
 rm -rf device/xiaomi/miatoll
 echo ">>> Clear vendor\n\n"
 rm -rf vendor/xiaomi/miatoll
-echo ">>> Clear Camera\n\n"
-rm -rf vendor/xiaomi/miuicamera
 echo ">>> Clear kernel/hardware\n\n"
 rm -rf kernel/xiaomi/sm6250
 echo ">>> Clear hardware \n\n"
@@ -78,5 +76,5 @@ gk -f
 
 # ----------- Build 1 (normal testkey build) -----------
 echo ">>> Starting normal Build Realase Key \n\n"
-rise sb
+rise b
 echo ">>> Normal build finished\n\n"
