@@ -17,11 +17,11 @@ echo ">>> Clear TimeKeep\n\n"
 rm -rf hardware/sony/timekeep
 echo "Remove Official OTA and Add A Custom OTA"
 rm -rf packages/apps/Updater
-
+echo "Now remove old Keys"
+rm -rf vendor/lineage-priv/keys
 
 
 #Rom Setup
-
 echo ">>> Now Rom Initialize local repository\n\n"
 # ROM source repo
 repo init -u https://github.com/RisingOS-Revived/android -b sixteen --git-lfs
@@ -78,5 +78,7 @@ gk -f
 # ----------- Build 1 (normal testkey build) -----------
 echo ">>> Starting normal Build Realase Key \n\n"
 rise b
+rise sb
+rise fb
 
 echo ">>> Normal build finished\n\n"
