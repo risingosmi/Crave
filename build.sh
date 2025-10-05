@@ -77,7 +77,5 @@ gk -f
 # ----------- Build 1 (normal testkey build) -----------
 echo ">>> Starting normal Build Realase Key \n\n"
 rise b
-rise fb
-rise sb
 
 echo ">>> Normal build finished\n\n"
