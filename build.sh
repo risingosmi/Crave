@@ -32,6 +32,11 @@ echo ">>> Now Cloning KEY repository\n\n"
 git clone https://github.com/risingosmi/vendor-risingos_priv-keys.git -b 16 vendor/lineage-priv/keys
 
 
+echo "Now Settings Custom OTA updates "
+# OTA Resource
+git clone https://github.com/risingosmi/android_packages_apps_Updater.git -b 16 packages/apps/Updater
+
+
 echo ">>> Now Cloning Device Tree repository\n\n"
 # Device Tree
 git clone https://github.com/risingosmi/device_xiaomi_miatoll.git -b 16 device/xiaomi/miatoll
@@ -51,10 +56,6 @@ git clone https://github.com/risingosmi/hardware_xiaomi.git -b 16 hardware/xiaom
 echo ">>> Now Cloning Timekeep Tree repository\n\n"
 # LineageOS TimeKeep
 git clone https://github.com/LineageOS/android_hardware_sony_timekeep.git -b lineage-22.2 hardware/sony/timekeep
-
-echo "Now Settings Custom OTA updates "
-# OTA Resource
-git clone https://github.com/risingosmi/android_packages_apps_Updater.git -b 16 packages/apps/Updater
 
 echo ">>> Now Rom In Building Setup\n\n"
 
