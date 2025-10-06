@@ -15,53 +15,53 @@ echo ">>> Clear hardware \n\n"
 rm -rf hardware/xiaomi
 echo ">>> Clear TimeKeep\n\n"
 rm -rf hardware/sony/timekeep
-echo "Remove Official OTA and Add A Custom OTA"
-rm -rf packages/apps/Updater
 echo "Now remove old Keys"
 rm -rf vendor/lineage-priv/keys
+echo "Now Delete Micamera if Exists"
+rm -rf vendor/xiaomi/miuicamera
+echo "Now Delete Dolby if Exists"
+rm -rf  vendor/sony/dolby
 
 
 #Rom Setup
-echo ">>> Now Rom Initialize local repository\n\n"
+echo ">>> Now Rom Initialize local repository"
 # ROM source repo
-repo init -u https://github.com/RisingOS-Revived/android -b sixteen --git-lfs
+repo init -u https://github.com/risingosmi/RISINGOS -b 16 --git-lfs
 
 
-echo ">>> Now Cloning KEY repository\n\n"
-# Sigm keys
+echo ">>> Now Cloning KEY repository"
+# Sign keys
 git clone https://github.com/risingosmi/vendor-risingos_priv-keys.git -b 16 vendor/lineage-priv/keys
 
-
-echo "Now Settings Custom OTA updates "
-# OTA Resource
-git clone https://github.com/risingosmi/android_packages_apps_Updater.git -b 16 packages/apps/Updater
-
-
-echo ">>> Now Cloning Device Tree repository\n\n"
+echo ">>> Now Cloning Device Tree repository"
 # Device Tree
 git clone https://github.com/risingosmi/device_xiaomi_miatoll.git -b 16 device/xiaomi/miatoll
 
-echo ">>> Now Cloning Vendor Tree repository\n\n"
+echo ">>> Now Cloning Vendor Tree repository"
 # Device Vendor
 git clone https://github.com/risingosmi/vendor_xiaomi_miatoll.git -b 16 vendor/xiaomi/miatoll
 
-echo ">>> Now Cloning Kernel Tree repository\n\n"
+echo ">>> Now Cloning Kernel Tree repository"
 # Device Kernel
 git clone https://github.com/risingosmi/kernel_xiaomi_sm6250.git -b 16 kernel/xiaomi/sm6250
 
-echo ">>> Now Cloning Hardware Tree repository\n\n"
+echo ">>> Now Cloning Hardware Tree repository"
 # Device Hardware 
 git clone https://github.com/risingosmi/hardware_xiaomi.git -b 16 hardware/xiaomi
 
-echo ">>> Now Cloning Timekeep Tree repository\n\n"
+echo ">>> Now Cloning Timekeep Tree repository"
 # LineageOS TimeKeep
 git clone https://github.com/LineageOS/android_hardware_sony_timekeep.git -b lineage-22.2 hardware/sony/timekeep
 
-echo ">>> Now Rom In Building Setup\n\n"
+echo "Cloning Micamera"
+#MiUiCamera
+git clone https://github.com/risingosmi/vendor_xiaomi_miuicamera.git -b 16 vendor/xiaomi/miuicamera
 
+echo "Cloning Sony Dolby"
+# Dolby Atmos
+git clone https://github.com/risingosmi/vendor_sony_dolby.git -b 16 vendor/sony/dolby
 
-
-#Rom Building
+echo ">>> Now Rom In Building Setup"
 
 # Sync
 /opt/crave/resync.sh
@@ -78,7 +78,4 @@ gk -f
 # ----------- Build 1 (normal testkey build) -----------
 echo ">>> Starting normal Build Realase Key \n\n"
 rise b
-rise sb
-rise fb
-
 echo ">>> Normal build finished\n\n"
