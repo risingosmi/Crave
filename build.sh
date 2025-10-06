@@ -59,7 +59,7 @@ git clone https://github.com/risingosmi/vendor_xiaomi_miuicamera.git -b 16 vendo
 
 echo "Cloning Sony Dolby"
 # Dolby Atmos
-git clone https://github.com/risingosmi/vendor_sony_dolby.git -b 16 vendor/sony/dolby
+git clone https://github.com/risingosmi/vendor_sony_dolby.git -b 16 vendor/dolby
 
 echo ">>> Now Rom In Building Setup"
 
