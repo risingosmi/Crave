@@ -25,45 +25,28 @@ rm -rf  vendor/sony/dolby
 
 #Rom Setup
 echo ">>> Now Rom Initialize local repository"
-# ROM source repo
 repo init -u https://github.com/risingosmi/RISINGOS -b 16 --git-lfs
 
-
 echo ">>> Now Cloning KEY repository"
-# Sign keys
 git clone https://github.com/risingosmi/vendor-risingos_priv-keys.git -b 16 vendor/lineage-priv/keys
-
 echo ">>> Now Cloning Device Tree repository"
-# Device Tree
 git clone https://github.com/risingosmi/device_xiaomi_miatoll.git -b 16 device/xiaomi/miatoll
-
 echo ">>> Now Cloning Vendor Tree repository"
-# Device Vendor
 git clone https://github.com/risingosmi/vendor_xiaomi_miatoll.git -b 16 vendor/xiaomi/miatoll
-
 echo ">>> Now Cloning Kernel Tree repository"
-# Device Kernel
 git clone https://github.com/risingosmi/kernel_xiaomi_sm6250.git -b 16 kernel/xiaomi/sm6250
-
 echo ">>> Now Cloning Hardware Tree repository"
-# Device Hardware 
 git clone https://github.com/risingosmi/hardware_xiaomi.git -b 16 hardware/xiaomi
-
 echo ">>> Now Cloning Timekeep Tree repository"
-# LineageOS TimeKeep
 git clone https://github.com/LineageOS/android_hardware_sony_timekeep.git -b lineage-22.2 hardware/sony/timekeep
-
 echo "Cloning Micamera"
-#MiUiCamera
 git clone https://github.com/risingosmi/vendor_xiaomi_miuicamera.git -b 16 vendor/xiaomi/miuicamera
-
 echo "Cloning Sony Dolby"
-# Dolby Atmos
 git clone https://github.com/risingosmi/vendor_dolby_miatoll.git -b 16 vendor/sony/dolby
 
-echo ">>> Now Rom In Building Setup"
 
-# Sync
+
+echo ">>> Now Rom In Building Setup"
 /opt/crave/resync.sh
 
 # Set up build environment
@@ -74,7 +57,6 @@ gk -f
 
 # Lunch
 riseup miatoll user
-
 
 
 # ----------- Build 1 (normal testkey build) -----------
