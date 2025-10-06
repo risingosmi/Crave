@@ -69,11 +69,13 @@ echo ">>> Now Rom In Building Setup"
 # Set up build environment
 source build/envsetup.sh
 
+# Singing The Rom 
+gk -f
+
 # Lunch
 riseup miatoll user
 
-# Singing The Rom 
-gk -f
+
 
 # ----------- Build 1 (normal testkey build) -----------
 echo ">>> Starting normal Build Realase Key \n\n"
