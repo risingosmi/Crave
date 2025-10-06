@@ -20,7 +20,7 @@ rm -rf vendor/lineage-priv/keys
 echo "Now Delete Micamera if Exists"
 rm -rf vendor/xiaomi/miuicamera
 echo "Now Delete Dolby if Exists"
-rm -rf  vendor/sony/dolby
+rm -rf  vendor/dolby
 
 
 #Rom Setup
@@ -42,7 +42,7 @@ git clone https://github.com/LineageOS/android_hardware_sony_timekeep.git -b lin
 echo "Cloning Micamera"
 git clone https://github.com/risingosmi/vendor_xiaomi_miuicamera.git -b 16 vendor/xiaomi/miuicamera
 echo "Cloning Sony Dolby"
-git clone https://github.com/risingosmi/vendor_dolby_miatoll.git -b 16 vendor/sony/dolby
+git clone https://github.com/risingosmi/vendor_dolby_miatoll.git -b 16 vendor/dolby
 
 
 
