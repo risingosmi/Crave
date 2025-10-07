@@ -19,8 +19,6 @@ echo "Now remove old Keys"
 rm -rf vendor/lineage-priv/keys
 echo "Now Delete Micamera if Exists"
 rm -rf vendor/xiaomi/miuicamera
-echo "Now Delete Dolby if Exists"
-rm -rf  vendor/dolby
 
 
 #Rom Setup
@@ -41,9 +39,6 @@ echo ">>> Now Cloning Timekeep Tree repository"
 git clone https://github.com/LineageOS/android_hardware_sony_timekeep.git -b lineage-22.2 hardware/sony/timekeep
 echo "Cloning Micamera"
 git clone https://github.com/risingosmi/vendor_xiaomi_miuicamera.git -b 16 vendor/xiaomi/miuicamera
-echo "Cloning Sony Dolby"
-git clone https://github.com/risingosmi/vendor_dolby_miatoll.git -b 16 vendor/dolby
-
 
 
 echo ">>> Now Rom In Building Setup"
