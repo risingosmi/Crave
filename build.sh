@@ -60,5 +60,5 @@ gk -f
 # Start build
 # ================================
 echo ">>> Starting RisingOS Build"
-riseup miatoll user
+riseup miatoll eng
 rise b
