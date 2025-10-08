@@ -35,22 +35,6 @@ echo ">>> Syncing repo"
 source build/envsetup.sh
 
 # ================================
-# === RISINGOS BUILD FLAGS ===
-# ================================
-echo ">>> Applying RisingOS build flags"
-
-# Launcher flags
-# false = use system launcher (not Lawnchair)
-export TARGET_PREBUILT_LAWNCHAIR_LAUNCHER=true
-
-# GMS core build flags (CORE GApps)
-export WITH_GMS=true
-export TARGET_USES_PICO_GAPPS=true
-
-# Optional: disable Pixel Launcher explicitly
-export PRODUCT_PACKAGES_REMOVE="NexusLauncherRelease"
-
-# ================================
 # Generate signing keys
 # ================================
 echo ">>> Generating signing keys"
