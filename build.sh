@@ -48,7 +48,7 @@ export WITH_GMS=true
 export TARGET_USES_PICO_GAPPS=true
 
 # Optional: disable Pixel Launcher explicitly
-export PRODUCT_PACKAGES_REMOVE="NexusLauncherPrebuilt"
+export PRODUCT_PACKAGES_REMOVE="NexusLauncherRelease"
 
 # ================================
 # Generate signing keys
