@@ -1,24 +1,7 @@
 #!/bin/bash
-
-
-
-# Clean old repo/local_manifests and device/vendor/kernel/hardware trees
-echo ">>> Cleaning old manifests and device/vendor/kernel/hardware directories\n\n\n"
+# Clean old repo/local_manifests
 rm -rf .repo/local_manifests/
-echo ">>> Clear device\n\n"
-rm -rf device/xiaomi/miatoll
-echo ">>> Clear vendor\n\n"
-rm -rf vendor/xiaomi/miatoll
-echo ">>> Clear kernel/hardware\n\n"
-rm -rf kernel/xiaomi/sm6250
-echo ">>> Clear hardware \n\n"
-rm -rf hardware/xiaomi
-echo ">>> Clear TimeKeep\n\n"
-rm -rf hardware/sony/timekeep
-echo "Now remove old Keys"
-rm -rf vendor/lineage-priv/keys
-echo "Now Delete Micamera if Exists"
-rm -rf vendor/xiaomi/miuicamera
+
 
 
 #Rom Setup
@@ -53,8 +36,5 @@ gk -f
 # Lunch
 riseup miatoll user
 
-
 # ----------- Build 1 (normal testkey build) -----------
-echo ">>> Starting normal Build Realase Key \n\n"
 rise b
-echo ">>> Normal build finished\n\n"
